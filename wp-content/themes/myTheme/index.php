@@ -1,19 +1,13 @@
 <?php get_header(); ?>
 
-<div class="container mx-auto p-4">
-    <?php 
-    $image = get_field('image');
-    if( !empty( $image ) ): ?>
-        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-    <?php endif; ?>
-    <h1 class="text-5xl font-bold text-center"><?php the_field('titre'); ?></h1>
-    <!-- <p class="text-2xl text-center mt-4"><?php the_field('sous_titre'); ?></p> -->
-    <div class="prose lg:prose-xl mt-8">
-        <?php the_field('contenu'); ?>
+<main class="relative mx-auto w-screen h-screen" style="background-image: url(<?php the_field('image'); ?>); background-size: cover; background-position: center; height: 1440px;">
+
+    <h1 class="pt-48 text-7xl text-center text-white font-medium max-w-[800px] mx-auto tracking-tight leading-tight"><?php the_field('titre'); ?></h1>
+
+    <div class="prose lg:prose-xl mt-8 text-white text-center">
+        <p><?php the_field('contenu'); ?></p>
     </div>
-    <!-- <div class="text-center mt-8">
-        <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded"><?php the_field('bouton_cta'); ?></a>
-    </div> -->
-</div>
+
+</main>
 
 <?php get_footer(); ?>

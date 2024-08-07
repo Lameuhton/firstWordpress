@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-sans;
+    }
+    h2 {
+        @apply text-h2 font-medium;
+    }
+    h3 {
+        @apply text-h3 font-medium;
+    }
+    p {
+        @apply text-p font-light;
+    }
+}

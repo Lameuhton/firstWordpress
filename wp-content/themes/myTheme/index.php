@@ -9,5 +9,23 @@
     </div>
 
 </main>
+<section>
+
+</section>
+<section class="pl-8 ">
+    <?php
+    $images = get_field('images-gallery');
+    if( $images ): ?>
+        <div class="flex  overflow-x-scroll gap-10">
+            <?php foreach( $images as $image ): ?>
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="w-full" />
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
+
+</section>
+<section>
+
+</section>
 
 <?php get_footer(); ?>

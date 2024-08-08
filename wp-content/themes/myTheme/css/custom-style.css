@@ -1,0 +1,14 @@
+/* Style pour masquer la barre de défilement */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.no-select img {
+    pointer-events: none; /* Désactiver les événements de la souris sur les images */
+    user-select: none;
+}

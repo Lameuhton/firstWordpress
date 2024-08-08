@@ -4,15 +4,15 @@
 
 @layer base {
     body {
-        @apply font-sans;
+        @apply font-sans overflow-x-hidden;
     }
-    h2 {
-        @apply text-h2 font-medium;
+    .h2 {
+        @apply text-h2 font-medium tracking-tight;
     }
-    h3 {
-        @apply text-h3 font-medium;
+    .h3 {
+        @apply text-h3 font-medium tracking-tight;
     }
-    p {
-        @apply text-p font-light;
+    .p {
+        @apply text-p font-light text-accent tracking-tight;
     }
 }
